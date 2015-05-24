@@ -9,8 +9,8 @@ public class Incrementatore extends Thread {
 
 	public void run() {
 		for (int i = 0; i < 5; i++) {
-			//synchronized (scatola) {
-			{
+			
+			synchronized (scatola) {
 				int valorePrima = scatola.quantita;
 				System.out.println(nome + " prima: " + valorePrima);
 				scatola.quantita++;
